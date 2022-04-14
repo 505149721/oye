@@ -1,0 +1,31 @@
+@import '../../app.wxss';
+.page {
+  height: 100Vh;
+  width: 100vw;
+}
+
+.page.show {
+  overflow: hidden;
+}
+
+.switch-sex::after {
+  content: "\e716";
+}
+
+.switch-sex::before {
+  content: "\e7a9";
+}
+
+.switch-music::after {
+  content: "\e66a";
+}
+
+.switch-music::before {
+  content: "\e6db";
+}
+.color{
+  color: #8fc97a;
+}
+.bgcolor{
+  background-color: #efede7;
+}

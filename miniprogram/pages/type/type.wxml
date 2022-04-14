@@ -1,0 +1,18 @@
+<!--miniprogram/pages/type.wxml-->
+<view class="header nav">
+  <text class="{{tabIndex==1?'text-green cur':''}} cu-item" data-index="1" bindtap="setTabIndex">支出</text>
+  <text class="{{tabIndex==2?'text-green cur':''}} cu-item" data-index="2" bindtap="setTabIndex">收入</text>
+</view>
+<view wx:if="{{tabIndex==1}}"  class="cu-list menu sm-border">
+  <view wx:for="{{icons.output}}" wx:for-item="item" wx:for-index="index"  class="cu-item">
+      <view class="content">
+        <image src="../../images/del.png" alt="" class="pic"></image>
+        <i class="iconfont icon-{{item.icon}} text-grey"></i>
+        <text class="text-grey" >{{item.text}} </text>
+        <image src="../../images/sort.png" alt="" class="pic right" ></image>
+      </view>
+  </view>
+</view>
+<view wx:else></view>
+<view class="cu-bar tabbar bg-white " bindtap="navToAddType"><text class="add-type">添加类别</text> </view>
+

@@ -1,0 +1,28 @@
+<view wx:if="{{!isHide}}">
+  <button bindtap="authorize">用户信息授权</button>
+</view>
+<view wx:else>
+<view class="header">
+  <picker class="time" mode="date" fields="month" bindchange="setNewMonth"><view ><text class="text-grey text-xs">{{timeObj.year}}年</text><view  class="text-lg">{{timeObj.month}}月<i class="text-sm">&nbsp;▼</i></view></view></picker>
+  
+  <view class="input"><text class="text-grey text-xs">收入</text><view class="text-lg">{{input}}</view></view>
+  <view class="output"><text class="text-grey text-xs">支出</text><view class="text-lg">{{output}}</view></view>
+</view>
+<view class="content">
+  <view wx:if="{{!records}}">本月暂无流水</view>
+  <view wx:else>
+    <block wx:for="{{records}}" wx:for-index="day" wx:for-key="day" wx:for-item="record">
+      <!-- mark:1 -->
+      <view class="cu-bar bg-white solid-bottom margin-top">
+         <view class="action">
+          {{timeObj.year}}年{{timeObj.month}}月{{day}}日
+         </view>
+      </view>
+      <!-- mark:2 -->
+      <list record="{{record}}" day="{{day}}" bindremoveItem="rmItem"></list>
+    </block>
+  </view>
+  <!-- mark:3 -->
+<view class="cuIcon-add round cu-avatar add-icon lg" bindtap="nvgToRec"></view>
+</view>
+</view>

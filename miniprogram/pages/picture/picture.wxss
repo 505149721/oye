@@ -1,0 +1,7 @@
+/* miniprogram/pages/picture.wxss */
+#mychart-dom-line{
+  height: 100%;
+}
+#mychart-dom-bar{
+  height: 100%;
+}

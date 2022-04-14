@@ -1,0 +1,31 @@
+
+.header{
+  background-color: #8fc97a;
+  display: flex;
+  text-align: center;
+  height: 45px;
+  align-items: center;
+}
+.time{
+  flex:1;
+  border-right: 1px #43474d solid;
+}
+.input{
+  flex:1
+}
+.output{
+  flex:1
+}
+.record{
+  border-bottom: gray solid 1px;
+}
+.add-icon{
+  background-color:#2e8d;
+  font-size: 18px;
+  position: absolute;
+  right: 10px;
+  bottom:10px
+}
+.text-grey{
+  color:#43474d
+}

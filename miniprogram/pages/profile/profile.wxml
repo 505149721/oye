@@ -1,0 +1,15 @@
+<view class="cu-list menu sm-border">
+  <view class="cu-item arrow" bindtap="navToType">
+      <view class="content">
+        <text class="cuIcon-circlefill text-grey"></text>
+        <text class="text-grey" >类别管理 </text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="upload">
+      <view class="content">
+        <text class="cuIcon-btn text-green"></text>
+        <text class="text-grey">上传至云端</text>
+      </view>
+      
+    </view>
+</view>

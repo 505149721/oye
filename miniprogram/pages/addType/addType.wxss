@@ -1,0 +1,17 @@
+/* miniprogram/pages/addType/addType.wxss */
+.color{
+  color: #8fc97a;
+}
+.bgcolor{
+  background-color: #efede7;
+}
+.type{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+}
+.type-item{
+  width: 33.33%;
+  margin:10px 0;
+}

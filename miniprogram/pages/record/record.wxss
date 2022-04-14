@@ -1,0 +1,32 @@
+/* miniprogram/pages/record/record.wxss */
+.header{
+  margin:0 auto
+}
+.tab-active{
+  border-bottom: 2px #FF2712 solid;
+}
+.content{
+  width: 100%;
+}
+.type{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+}
+.type-item{
+  width: 33.33%;
+  margin:10px 0;
+}
+.item-active{
+  color:#FF2712
+}
+.plus{
+  height: 30px;
+}
+.flex-center{
+  height: 40px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

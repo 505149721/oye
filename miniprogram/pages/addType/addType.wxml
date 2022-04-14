@@ -1,0 +1,15 @@
+<!--miniprogram/pages/addType/addType.wxml-->
+<view class="cu-form-group margin-top">
+  <view class="cu-avatar round  bgcolor"><i class="fa fa-star color"></i></view>
+		<input placeholder="请输入类别名称"></input>
+</view>
+<view class="con">
+  <view wx:for="{{icons}}" wx:for-item="item" wx:for-index="key">
+    <text>{{key}}</text>
+    <view class="type">
+      <view class="type-item" wx:for="{{item.num}}" wx:for-item="icon" wx:for-index="index">
+        <i class="iconfont icon-{{item.text}}{{index+1}}"></i>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+<!--miniprogram/pages/record/record.wxml-->
+<view class="header nav">
+  <text class="{{tabIndex==1?'text-green cur':''}} cu-item" data-index="1" bindtap="setTabIndex">支出</text>
+  <text class="{{tabIndex==2?'text-green cur':''}} cu-item" data-index="2" bindtap="setTabIndex">收入</text>
+</view>
+
+<view class="content">
+  <view class="type">
+  <view  class="type-item {{index==iconIndex?'text-green':''}} text-lg " data-index="{{index}}" bindtap="setIconIndex" wx:for="{{cIcons}}" wx:for-index="index" wx:for-item="item" wx-key="index">
+    
+      <text class="iconfont icon-{{item.icon}}"></text>
+      <view>{{item.text}}</view>
+  </view>
+</view>
+  <view>
+    <view class="cu-form-group">
+		<view class="title">日期选择</view>
+		<picker mode="date" bindchange="setNewDate">
+			<view class="picker">
+				<text>{{timeObj.year}}年</text>
+        <text>{{timeObj.month}}月</text>
+        <text>{{timeObj.day}}日</text>
+			</view>
+		</picker>
+	</view>
+    <view class="cu-form-group">
+      <view class="title">金额</view>
+      <input type="text" placeholder="金额" bindinput="setCost"/></view>
+    <view class="cu-form-group">
+      <view class="title">备注</view>
+      <input type="text" placeholder="备注" bindinput="setPs"/></view>
+    
+    
+  </view>
+  <view class=" flex-center">
+    <button bindtap="setRecord" class="cu-btn bg-green round">确定</button>
+  </view>
+</view>

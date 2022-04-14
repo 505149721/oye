@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/record/record",
+    "pages/picture/picture",
+    "pages/profile/profile",
+    "pages/type/type",
+    "pages/addType/addType"
+  ],
+  "window": {
+    "backgroundColor": "#cee9b6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8fc97a",
+    "navigationBarTitleText": "哦叶记账",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "流水账"
+      },
+      {
+        "pagePath": "pages/picture/picture",
+        "text": "图表"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人"
+      }
+    ],
+    "borderStyle": "white"
+  }
+}

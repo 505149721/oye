@@ -1,0 +1,34 @@
+<!--miniprogram/pages/picture.wxml-->
+<scroll-view scroll-x class="bg-white nav text-center">
+  <view class="cu-item {{i==index?'text-blue cur':''}}" wx:for="{{arr}}" wx:key bindtap="tabSelect_1" wx:for-index="i" data-index="{{i}}">
+    {{arr[i]}}
+  </view>
+</scroll-view>
+<view wx:if="{{index==0}}">
+  <scroll-view scroll-x class="bg-white nav" scroll-with-animation scroll-left="{{scrollLeft}}">
+  <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{num}}" wx:key bindtap="tabSelect_2" data-id="{{index}}">
+    {{index+1}}周
+  </view>
+</scroll-view>
+</view>
+<view wx:elif="{{index==1}}">
+  <scroll-view scroll-x class="bg-white nav" scroll-with-animation scroll-left="{{scrollLeft}}">
+  <view class="cu-item {{index==TabCur_2?'text-green cur':''}}" wx:for="{{timeObj.month}}" wx:key bindtap="tabSelect_3" data-id="{{index}}">
+    {{index+1}}月
+  </view>
+</scroll-view>
+</view>
+<view wx:else="{{index==2}}">
+  <scroll-view scroll-x class="bg-white nav" scroll-with-animation scroll-left="{{scrollLeft}}">
+  <view class="cu-item {{index==TabCur_3?'text-green cur':''}}" wx:for="{{1}}" wx:key bindtap="tabSelect_4" data-id="{{index}}">
+    {{timeObj.year}}年
+  </view>
+</scroll-view>
+</view>
+<view class="box" style="height:300px;">
+<ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+</view>
+<view class="box" style="height:300px;">
+<ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ bar }}"></ec-canvas>
+</view>
+

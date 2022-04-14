@@ -1,0 +1,24 @@
+/* miniprogram/pages/type.wxss */
+.header{
+  margin:0 auto
+}
+.add-type{
+  
+  width: 100%;
+  text-align: center;
+}
+.content{
+  position: relative;
+}
+.right{
+  position: absolute;
+  right: 10px;
+}
+.pic{
+  height: 5px;
+}
+.tabbar{
+  width: 100%;
+  position:fixed;
+  bottom: 0;
+}

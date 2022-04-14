@@ -1,0 +1,15 @@
+<view class="cu-list menu-avatar">
+    <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{record}}" wx:key="index"  wx:for-item="item" wx:for-index="index" bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+      <view class="cu-avatar round  bgcolor"><i class="iconfont icon-{{item.icon}} color"></i></view>
+      <view class="content">
+        <view class="text-df">{{item.text}}</view>
+        <view class="text-grey text-sm" wx:if="{{item.ps}}">{{item.ps}}</view>
+      </view>
+      <view class="action">
+        <view class="text-df">{{item.is==1?'-':'+'}}{{item.cost}}</view>
+      </view>
+      <view class="move">
+        <view class="bg-red" data-index="{{index}}" data-day="{{day}}" bindtap="delItem" >删除</view>
+      </view>
+    </view>
+  </view>
